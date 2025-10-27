@@ -1,0 +1,68 @@
+###  TESTE INICIAL - Verificar API
+GET http://localhost:3333/
+Content-Type: application/json
+
+###  USUÁRIOS - Criar novo usuário
+POST http://localhost:3333/users
+Content-Type: application/json
+
+{
+  "name": "João da Silva",
+  "birthDate": "1995-04-10",
+  "sex": "M",
+  "address": "Rua das Flores, 123 - São Paulo"
+}
+
+###  USUÁRIOS - Listar todos os usuários
+GET http://localhost:3333/users
+Content-Type: application/json
+
+
+###  AUTORES - Criar novo autor
+POST http://localhost:3333/authors
+Content-Type: application/json
+
+{
+  "name": "Machado de Assis",
+  "birthDate": "1839-06-21",
+  "sex": "M",
+  "writingGenre": "Novel"
+}
+
+###  AUTORES - Listar todos os autores
+GET http://localhost:3333/authors
+Content-Type: application/json
+
+
+###  LIVROS - Cadastrar novo livro
+POST http://localhost:3333/books
+Content-Type: application/json
+
+{
+  "title": "Dom Casmurro",
+  "synopsis": "Um clássico da literatura brasileira sobre ciúme e dúvida.",
+  "year": 1899,
+  "author": "ID_DO_AUTOR_AQUI"
+}
+
+###  LIVROS - Listar todos os livros
+GET http://localhost:3333/books
+Content-Type: application/json
+
+
+###  EMPRÉSTIMO - Realizar novo empréstimo
+POST http://localhost:3333/loans
+Content-Type: application/json
+
+{
+  "user": "ID_DO_USUARIO_AQUI",
+  "book": "ID_DO_LIVRO_AQUI"
+}
+
+###  (OPCIONAL) TESTAR DATA EXPIRADA
+# simular livro com expectedReturnDate vencida e tentar novo empréstimo
+
+
+###  VERIFICAR LISTAGEM DE LIVROS APÓS EMPRÉSTIMO
+GET http://localhost:3333/books
+Content-Type: application/json
