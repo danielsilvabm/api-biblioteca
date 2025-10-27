@@ -15,7 +15,7 @@ API para gerenciar uma biblioteca, permitindo cadastrar e consultar **autores, l
 
 ##  Endpoints
 
-| Recurso   | Método | Rota        | Descrição                 
+| Recurso   | Método | Rota       | Descrição                 
 
 | Usuários  | POST   | /users     | Cadastrar usuário         
 |           | GET    | /users     | Listar usuários           
