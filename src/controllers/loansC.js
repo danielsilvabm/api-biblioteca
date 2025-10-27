@@ -1,6 +1,6 @@
-import Loan from "../models/Loan.js";
-import Book from "../models/Book.js";
-import User from "../models/User.js";
+import Loan from "../models/Loans.js";
+import Book from "../models/Books.js";
+import User from "../models/Users.js";
 
 // fazendo um empréstimo
 export const createLoan = async (req, res) => {

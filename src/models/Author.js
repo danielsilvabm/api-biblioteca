@@ -1,16 +1,14 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
+const authorSchema = new mongoose.Schema({
+  name: { type: String, required: true, unique: true },
+  birthDate: { type: Date, required: true },
+  sex: { type: String, required: true },
+  writingGenre: {
+    type: String,
+    enum: ["Novel", "Poetry", "Fantasy", "Fiction", "Mystery", "Suspense"],
+    required: true
+  }
+});
 
-const AuthorSchema = new mongoose.Schema({
-    name: { type: String, required: true, unique: true, trim: true },
-    birthDate: { type: Date, required: true },
-    sex: { type: String, required: true },
-    writingGenre: {
-        type: String,
-        required: true,
-        enum: ['Novel','Poetry','Fantasy','Fiction','Mystery','Suspense']
-    }
-}, { timestamps: true });
-
-
-module.exports = mongoose.model('Authors', AuthorSchema);
+export default mongoose.model("Author", authorSchema);

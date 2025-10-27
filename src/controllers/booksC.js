@@ -1,4 +1,4 @@
-import Book from "../models/Book.js";
+import Book from "../models/Books.js";
 import Author from "../models/Author.js";
 
 // Cadastra novo livro
